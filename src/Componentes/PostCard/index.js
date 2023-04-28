@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Post.module.css";
 import BotaoPrincipal from "Componentes/BotaoPrincipal";
 
-export default function PostCard({ post }) {
+export default function PostCard({ post, isInHome }) {
+
+  //Saber se vim do Inicio ou de um Post em si.
+  const localizacao = useLocation();
+
   return (
-    <Link to={`post/${post.id}`}>
+    <Link to={localizacao.pathname == "/" ? `post/${post.id}` : `/post/${post.id}#post` }>
       <div className={styles.post}>
         <img
           className={styles.capa}

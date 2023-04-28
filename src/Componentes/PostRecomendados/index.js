@@ -2,12 +2,13 @@ import PostCard from "Componentes/PostCard"
 import styles from "./PostRecomendado.module.css";
 
 export default function PostRecomendados({posts}) {
+
   return (
     <section>
-      <h1>Outros posts que você pode gostar:</h1>
+      <h3>Outros posts que você pode gostar:</h3>
       <ul className={styles.posts}>
         {posts.map((post) => (
-          <PostCard post={post}/>
+          <PostCard key={post.id} post={post} />
         ))}
       </ul>
     </section>

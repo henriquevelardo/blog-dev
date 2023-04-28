@@ -4,6 +4,8 @@ import posts from "json/posts.json";
 import PostCard from "Componentes/PostCard";
 
 export default function Inicio() {
+
+
   return (
     <ul className={styles.posts}>
       {posts.map((post) => (

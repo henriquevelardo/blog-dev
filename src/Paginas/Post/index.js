@@ -43,7 +43,7 @@ export default function Post() {
                 titulo={post.titulo}
                 fotoCapa={`/assets/posts/${post.id}/capa.png`}
               >
-                <div className="post-markdown-container">
+                <div className="post-markdown-container" id="post">
                   <ReactMarkdown>{post.texto}</ReactMarkdown>
                 </div>
                 <PostRecomendados posts={postRecomendado} />
